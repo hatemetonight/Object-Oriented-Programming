@@ -15,7 +15,7 @@ public class Main {
             array[i] = input.nextInt(); // Заполняем массив элементами, введёнными с клавиатуры
         }
 
-        double max_number = 0.0; // Ищем максимальное число
+        double max_number = array[0]; // Ищем максимальное число
         for (int i = 0; i < length; i++) {
             if (max_number < array[i])
                     max_number = array[i];
