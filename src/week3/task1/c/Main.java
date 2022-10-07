@@ -7,36 +7,40 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the sensor reading >>>");
-        String sensorPackage = scanner.nextLine();
+        Scanner input_scanner = new Scanner(System.in);
+        System.out.println("Введите показания с датчика:");
+        String input_sensor = input_scanner.nextLine();
 
-        System.out.println("How to sort? (by height id - 1 / by average temperature rise - 2) >>>");
-        int sortingOption = scanner.nextInt();
+        System.out.println("Как сортировать? (1 - по возрастанию, 2 - по возрастанию средней температуры)");
+        int select_sort = input_scanner.nextInt();
 
-        Integer[][] result = OutputReadings(sensorPackage);
-        switch (sortingOption) {
-            case 1 -> {
-                Arrays.sort(result, Comparator.comparingInt(o -> o[0]));
-                for (Integer[] integers : result) System.out.println(integers[0] + " " +
+        Integer[][] result = Sensor_result(input_sensor);
+
+        if (select_sort == 1) {
+            Arrays.sort(result, Comparator.comparingInt(o -> o[0]));
+            for (Integer[] integers : result)
+                System.out.println(integers[0] + " " +
                         Double.parseDouble(String.valueOf(integers[1])));
-            }
-            case 2 -> {
-                Arrays.sort(result, Comparator.comparingInt(o -> o[1]));
-                for (Integer[] integers : result) System.out.println(integers[0] + " " +
+        } else if (select_sort == 2) {
+            Arrays.sort(result, Comparator.comparingInt(o -> o[1]));
+            for (Integer[] integers : result)
+                System.out.println(integers[0] + " " +
                         Double.parseDouble(String.valueOf(integers[1])));
-            }
+        }
+        else {
+            System.out.println("Такой сортировки нет");
+            System.exit(0);
         }
     }
 
-    public static Integer[][] OutputReadings(String readings) {
-        String[] text = readings.split("@");
-        Integer[][] output = new Integer[text.length][2];
+    public static Integer[][] Sensor_result(String input_sensor) {
+        String[] data_sensor = input_sensor.split("@");
+        Integer[][] result = new Integer[data_sensor.length][2];
 
-        for (int i = 0; i < text.length; i++){
-            output[i][0] = Integer.parseInt(text[i].substring(0, 2));
-            output[i][1] = Integer.parseInt(text[i].substring(2));
+        for (int i = 0; i < data_sensor.length; i++){
+            result[i][0] = Integer.parseInt(data_sensor[i].substring(0, 2));
+            result[i][1] = Integer.parseInt(data_sensor[i].substring(2));
         }
-        return output;
+        return result;
     }
 }
