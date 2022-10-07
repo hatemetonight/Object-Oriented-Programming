@@ -4,14 +4,14 @@ package week2.task2.b;
 import java.util.Scanner;
 
 public class Sqrt {
-    static void sqrt_geron(double a) {
+    static Double sqrt_geron(double a) {
         int i = 0;
         double b = a;
         while ((b*b > a) && (i < 200)) {
             b = (b+ a/b) / 2;
             i++;
         }
-        System.out.println(b);
+        return b;
     }
 
     public static void main(String[] args) {
@@ -19,6 +19,6 @@ public class Sqrt {
         Scanner number_scanner = new Scanner(System.in);
         int number = number_scanner.nextInt();
 
-        sqrt_geron(number);
+        System.out.println(sqrt_geron(number));
     }
 }
