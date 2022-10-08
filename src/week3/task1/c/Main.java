@@ -7,21 +7,21 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner input_scanner = new Scanner(System.in);
+        Scanner inputScanner = new Scanner(System.in);
         System.out.println("Введите показания с датчика:");
-        String input_sensor = input_scanner.nextLine();
+        String inputSensor = inputScanner.nextLine();
 
         System.out.println("Как сортировать? (1 - по возрастанию, 2 - по возрастанию средней температуры)");
-        int select_sort = input_scanner.nextInt();
+        int selectSort = inputScanner.nextInt();
 
-        Integer[][] result = Sensor_result(input_sensor);
+        Integer[][] result = sensorResult(inputSensor);
 
-        if (select_sort == 1) {
+        if (selectSort == 1) {
             Arrays.sort(result, Comparator.comparingInt(o -> o[0]));
             for (Integer[] integers : result)
                 System.out.println(integers[0] + " " +
                         Double.parseDouble(String.valueOf(integers[1])));
-        } else if (select_sort == 2) {
+        } else if (selectSort == 2) {
             Arrays.sort(result, Comparator.comparingInt(o -> o[1]));
             for (Integer[] integers : result)
                 System.out.println(integers[0] + " " +
@@ -33,13 +33,13 @@ public class Main {
         }
     }
 
-    public static Integer[][] Sensor_result(String input_sensor) {
-        String[] data_sensor = input_sensor.split("@");
-        Integer[][] result = new Integer[data_sensor.length][2];
+    public static Integer[][] sensorResult(String inputSensor) {
+        String[] dataSensor = inputSensor.split("@");
+        Integer[][] result = new Integer[dataSensor.length][2];
 
-        for (int i = 0; i < data_sensor.length; i++){
-            result[i][0] = Integer.parseInt(data_sensor[i].substring(0, 2));
-            result[i][1] = Integer.parseInt(data_sensor[i].substring(2));
+        for (int i = 0; i < dataSensor.length; i++){
+            result[i][0] = Integer.parseInt(dataSensor[i].substring(0, 2));
+            result[i][1] = Integer.parseInt(dataSensor[i].substring(2));
         }
         return result;
     }

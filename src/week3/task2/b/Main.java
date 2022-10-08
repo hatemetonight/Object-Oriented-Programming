@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Введите IPv6 адрес:");
 
-        Scanner ipv6_scanner = new Scanner(System.in);
-        String ipv6 = ipv6_scanner.nextLine();
+        Scanner ipv6Scanner = new Scanner(System.in);
+        String ipv6 = ipv6Scanner.nextLine();
 
 
         System.out.println(isValidIPv6(ipv6));

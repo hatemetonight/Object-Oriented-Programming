@@ -6,8 +6,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Введите email адрес:");
 
-        Scanner email_scanner = new Scanner(System.in);
-        String email = email_scanner.nextLine();
+        Scanner emailScanner = new Scanner(System.in);
+        String email = emailScanner.nextLine();
 
 
         System.out.println(isValidEmail(email));

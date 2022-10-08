@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner input_str = new Scanner(System.in);
+        Scanner inputStr = new Scanner(System.in);
 
         System.out.println("Введите строку:");
-        String text =  input_str.nextLine();
+        String text =  inputStr.nextLine();
 
         System.out.printf("%.2f",shannonEntropy(text));
 
