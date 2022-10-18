@@ -1,13 +1,13 @@
 package week3.task1.c;
 
-import week4.task3.Task1Exception;
+import week4.task3.WrongTempException;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
 
 public class Main {
-    public static void main(String[] args) throws Task1Exception {
+    public static void main(String[] args) throws WrongTempException {
         Scanner inputScanner = new Scanner(System.in);
         System.out.println("Введите показания с датчика:");
         String inputSensor = inputScanner.nextLine();
@@ -34,7 +34,7 @@ public class Main {
         }
     }
 
-    public static Integer[][] sensorResult(String inputSensor) throws Task1Exception {
+    public static Integer[][] sensorResult(String inputSensor) throws WrongTempException {
         String[] dataSensor = inputSensor.split("@");
         Integer[][] result = new Integer[dataSensor.length][2];
 
@@ -43,9 +43,9 @@ public class Main {
                 result[i][0] = Integer.parseInt(dataSensor[i].substring(0, 2));
                 result[i][1] = Integer.parseInt(dataSensor[i].substring(2));
                 if (result[i][1] < -50 || result[i][1] > 50) {
-                    throw new Task1Exception("Неверные данные");
+                    throw new WrongTempException("Неверные данные");
                 }
-            } catch (NumberFormatException | Task1Exception e) {
+            } catch (NumberFormatException | WrongTempException e) {
                 throw new RuntimeException(e);
             }
         }
