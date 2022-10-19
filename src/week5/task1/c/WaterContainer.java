@@ -1,0 +1,34 @@
+package week5.task1.c;
+import week5.task1.a.Permutations;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class WaterContainer {
+    public static void main(String[] args) {
+        Scanner inputScanner = new Scanner(System.in);
+        String s = inputScanner.nextLine();
+
+        List<String> myList = new ArrayList<>(Arrays.asList(s.split(",")));
+        List<Integer> result = Permutations.convertListStringToIntegerList(myList);
+
+        System.out.println(maxArea(result));
+
+
+    }
+
+    public static int maxArea(List<Integer> height) {
+        int maxarea = 0, left = 0, right = height.size() - 1;
+        while (left < right) {
+            maxarea = Math.max(maxarea, Math.min(height.get(left), height.get(right)) * (right - left));
+            if (height.get(left) < height.get(right))
+                left++;
+            else
+                right--;
+        }
+        return maxarea;
+    }
+
+}

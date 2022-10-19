@@ -12,7 +12,7 @@ public class Permutations {
         System.out.println(perms(convertListStringToIntegerList(convertStringToList(s))));
 
     }
-    private static List<String> convertStringToList(String s) {
+    public static List<String> convertStringToList(String s) {
         try {
             return Arrays.asList(s.substring(1, s.length() - 1).split(", "));
         } catch (NumberFormatException e) {
@@ -20,7 +20,7 @@ public class Permutations {
         }
 
     }
-    private static List<Integer> convertListStringToIntegerList(List<String> stringList) {
+    public static List<Integer> convertListStringToIntegerList(List<String> stringList) {
         List<Integer> intList = new ArrayList<>();
         for(String s : stringList) intList.add(Integer.valueOf(s));
         return  intList;
