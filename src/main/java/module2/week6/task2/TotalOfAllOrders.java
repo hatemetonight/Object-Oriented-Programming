@@ -40,7 +40,7 @@ public class TotalOfAllOrders {
                 .sum();
 
 
-        System.out.printf("Сумма заказа за февраль составляет: %s", orderSumInFebruary);
+        System.out.printf("Сумма заказов за февраль составляет: %s", orderSumInFebruary);
     }
 
     private static Customer getCustomer(long id, String name, int tier) {
