@@ -15,7 +15,7 @@ public class TotalOfAllOrders {
 
         Product product1 = getProduct(1L, "Guitar", "Guitars", 432432.0);
         Product product2 = getProduct(2L, "Drums", "Drums", 4324324.0);
-        Product product3 = getProduct(3L, "Name3", "Name3", 123456.0);
+        Product product3 = getProduct(3L, "Microphone", "Microphone", 123456.0);
 
         Set<Product> products = new HashSet<>();
         products.add(product1);
