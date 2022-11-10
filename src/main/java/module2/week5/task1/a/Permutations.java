@@ -1,4 +1,4 @@
-package main.java.module2.week5.task1.a;
+package module2.week5.task1.a;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;

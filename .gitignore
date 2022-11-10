@@ -1,6 +1,7 @@
 ## IntelliJ
 ##############################
 out/
+lib/
 .idea/
 .idea_modules/
 *.iml

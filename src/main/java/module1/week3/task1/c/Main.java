@@ -1,6 +1,6 @@
-package main.java.module1.week3.task1.c;
+package module1.week3.task1.c;
 
-import main.java.module1.week4.task3.WrongTempException;
+import module1.week4.task3.WrongTempException;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;

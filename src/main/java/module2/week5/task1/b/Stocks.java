@@ -1,6 +1,6 @@
-package main.java.module2.week5.task1.b;
+package module2.week5.task1.b;
 import java.util.*;
-import main.java.module2.week5.task1.a.Permutations;
+import module2.week5.task1.a.Permutations;
 
 
 public class Stocks {
@@ -15,7 +15,7 @@ public class Stocks {
 
     }
 
-    private static int maxProfit(List<Integer> intList) {
+    public static int maxProfit(List<Integer> intList) {
 
         if (intList.size() < 2) {
             System.out.println("Получение прибыли требует как минимум двух цен в массиве");

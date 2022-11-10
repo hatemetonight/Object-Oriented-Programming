@@ -1,5 +1,5 @@
-package main.java.module1.week2.task3.c;
-import main.java.module1.week2.task3.b.MergeSort;
+package module1.week2.task3.c;
+import module1.week2.task3.b.MergeSort;
 
 import java.util.Scanner;
 

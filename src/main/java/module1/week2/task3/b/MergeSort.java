@@ -1,4 +1,4 @@
-package main.java.module1.week2.task3.b;
+package module1.week2.task3.b;
 import java.util.Arrays;
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package main.java.module2.week5.task3.a;
+package module2.week5.task3.a;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Scanner;

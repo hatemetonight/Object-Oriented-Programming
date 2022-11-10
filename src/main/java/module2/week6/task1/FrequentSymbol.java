@@ -1,4 +1,4 @@
-package main.java.module2.week6.task1;
+package module2.week6.task1;
 
 
 import java.util.*;

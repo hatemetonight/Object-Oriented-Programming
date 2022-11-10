@@ -1,5 +1,5 @@
-package main.java.module2.week5.task1.c;
-import main.java.module2.week5.task1.a.Permutations;
+package module2.week5.task1.c;
+import module2.week5.task1.a.Permutations;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

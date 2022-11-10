@@ -1,4 +1,4 @@
-package main.java.module2.week6.task2;
+package module2.week6.task2;
 
 import java.time.LocalDate;
 import java.util.Set;
